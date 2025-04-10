@@ -8,7 +8,7 @@
 4. Private/Public 선택
 5. `README`는 체크 안해도 됨 → **Create repository**
 
-> 이때 나오는 `https://github.com/username/repo.git` 주소를 깨지하세요!
+> 이때 나오는 `https://github.com/username/repo.git` 주소를 Copy하세요!
 
 ---
 
