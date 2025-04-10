@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Pretendard", sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      nav {
+        background-color: #444;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-right: 20px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      section {
+        background-color: #f7f7f7;
+        padding: 20px;
+        margin: 20px;
+        width: 90%;
+        max-width: 900px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      section h2 {
+        color: #333;
+        font-weight: bold;
+        margin-top: 0;
+      }
+
+      section p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .subsection,
+      article,
+      aside {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      article h3,
+      aside h3 {
+        margin-top: 0;
+        color: #222;
+      }
+
+      article p,
+      aside p {
+        color: #555;
+      }
+
+      time {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #888;
+      }
+
+      figure {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      figure img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      figcaption {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        border-top: 1px solid #ccc;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- NAVIGATION -->
+      <nav>
+        <!-- MENU ITEMS -->
+        <ul>
+          <li>nav 메뉴 1</li>
+          <li>nav 메뉴 2</li>
+          <li>nav 메뉴 3</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- SECTION 1 -->
+      <section>
+        <h2>섹션 1</h2>
+        <p>섹션 1 내용입니다. 기본적인 설명이 들어갑니다.</p>
+
+        <!-- ARTICLE -->
+        <article>
+          <h3>독립적인 아티클</h3>
+          <p>이 블록은 하나의 독립적인 콘텐츠 단위로, 뉴스 기사나 블로그 포스트 등에 적합합니다.</p>
+          <time datetime="2025-04-10">작성일: 2025년 4월 10일</time>
+        </article>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section>
+        <h2>섹션 2</h2>
+        <p>이곳은 두 번째 섹션입니다. 추가적인 콘텐츠를 포함할 수 있습니다.</p>
+
+        <!-- ASIDE -->
+        <aside>
+          <h3>관련 정보</h3>
+          <p>
+            이 내용은 본문과 간접적으로 관련된 보조 정보입니다. 사이드 노트로도 사용할 수 있습니다.
+          </p>
+        </aside>
+
+        <!-- FIGURE -->
+        <figure>
+          <img src="https://via.placeholder.com/600x300" alt="예시 이미지" />
+          <figcaption>샘플 이미지에 대한 설명입니다.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>푸터 내용 - &copy; 2025</p>
+    </footer>
+  </body>
+</html>
