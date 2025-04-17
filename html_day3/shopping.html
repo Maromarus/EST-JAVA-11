@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        gap: 10px;
+        margin: 0 auto;
+        padding: 10px;
+        /* max-width: 1200px; */
+      }
+      .card {
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 18px;
+        text-align: center;
+        background-color: #fff;
+      }
+      .card img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+      }
+      .labels {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .labels span {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 5px 10px;
+        border-radius: 18px;
+      }
+      #product {
+        background-color: #da2c2c;
+        color: #ffffff;
+      }
+      #delivery {
+        color: #000000;
+      }
+      .card p {
+        margin: 10px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      @media (max-width: 768px) {
+        .container {
+          display: grid;
+          grid-auto-flow: column; /* 수평으로 흐르게 설정 */
+          grid-auto-columns: calc(50%); /* 한 열 너비 설정 (2개 맞추기) */
+          grid-template-rows: repeat(2, auto); /* 2줄 고정 */
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 10px;
+          height: 100vh;
+        }
+
+        .card {
+          scroll-snap-align: start;
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 1" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>더블팩 샐러드 500G(팩)</p>
+      </div>
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 2" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>원데이 샐러드 500G(팩)</p>
+      </div>
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 3" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>방울토마토 샐러드 500G(팩)</p>
+      </div>
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 4" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>양배추 샐러드 500G(팩)</p>
+      </div>
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 5" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>더블팩 샐러드 500G(팩)</p>
+      </div>
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 6" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>원데이 샐러드 500G(팩)</p>
+      </div>
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 7" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>방울토마토 샐러드 500G(팩)</p>
+      </div>
+      <div class="card">
+        <img src="/images/snack.jpg" alt="상품 이미지 8" />
+        <div class="labels">
+          <span id="product">행사상품</span>
+          <span id="delivery">마트직송</span>
+        </div>
+        <p>양배추 샐러드 500G(팩)</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML과 CSS 기초 배우기 - MyBlog</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* 네비게이션 바 */
+      nav {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        margin-bottom: 30px;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo a {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .menu li {
+        margin-left: 20px;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #555;
+        font-weight: 500;
+      }
+
+      .menu a:hover {
+        color: #0066cc;
+      }
+
+      /* 블로그 포스트 */
+      .post-header {
+        margin-bottom: 30px;
+      }
+
+      .post-category {
+        display: inline-block;
+        background-color: #e6f2ff;
+        color: #0066cc;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+
+      .post-title {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .post-meta {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+
+      .post-meta span {
+        margin-right: 15px;
+      }
+
+      .post-img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+
+      /* 포스트 내용 */
+      .post-content h2 {
+        font-size: 1.7rem;
+        margin: 30px 0 15px;
+        color: #333;
+      }
+
+      .post-content h3 {
+        font-size: 1.3rem;
+        margin: 25px 0 10px;
+        color: #444;
+      }
+
+      .post-content p {
+        margin-bottom: 15px;
+      }
+
+      .post-content ul,
+      .post-content ol {
+        margin: 15px 0 15px 30px;
+      }
+
+      .post-content li {
+        margin-bottom: 8px;
+      }
+
+      .post-content code {
+        background-color: #f1f1f1;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+
+      .post-content pre {
+        background-color: #f1f1f1;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-family: monospace;
+        margin: 20px 0;
+      }
+
+      .post-content blockquote {
+        border-left: 4px solid #0066cc;
+        padding: 10px 20px;
+        background-color: #f5f8ff;
+        margin: 20px 0;
+        font-style: italic;
+      }
+
+      /* 푸터 */
+      footer {
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        padding: 20px 0;
+        margin-top: 50px;
+        text-align: center;
+        color: #777;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 15px 0;
+      }
+
+      .footer-links li {
+        margin: 0 10px;
+      }
+
+      .footer-links a {
+        color: #555;
+        text-decoration: none;
+      }
+
+      /* 반응형 */
+      @media (max-width: 768px) {
+        .post-title {
+          font-size: 1.8rem;
+        }
+
+        .nav-container {
+          flex-direction: column;
+        }
+
+        .menu {
+          margin-top: 15px;
+        }
+
+        .menu li:first-child {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 네비게이션 바 -->
+    <nav>
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html">MyBlog</a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">홈</a></li>
+          <li><a href="#">카테고리</a></li>
+          <li><a href="#">인기글</a></li>
+          <li><a href="#">소개</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="container">
+      <!-- 블로그 포스트 -->
+      <article class="blog-post">
+        <!-- 포스트 헤더 -->
+        <header class="post-header">
+          <div class="post-category">웹개발</div>
+          <h1 class="post-title">HTML과 CSS 기초 배우기</h1>
+          <div class="post-meta">
+            <span>작성자: 김개발</span>
+            <span>2023년 4월 15일</span>
+            <span>조회수: 1,250</span>
+          </div>
+        </header>
+
+        <!-- 포스트 이미지 -->
+        <img src="/api/placeholder/800/400" alt="HTML과 CSS 이미지" class="post-img" />
+
+        <!-- 포스트 내용 -->
+        <div class="post-content">
+          <h2>웹 개발의 기초</h2>
+          <p>
+            웹 개발은 현대 디지털 세계에서 가장 중요한 기술 중 하나입니다. 웹사이트나 웹
+            애플리케이션을 만들기 위해서는 HTML과 CSS 같은 기초적인 기술부터 시작해야 합니다. 이
+            글에서는 HTML과 CSS의 기본 개념과 함께 간단한 웹페이지를 만드는 방법을 알아보겠습니다.
+          </p>
+
+          <h2>HTML이란?</h2>
+          <p>
+            HTML(HyperText Markup Language)은 웹페이지의 구조를 정의하는 마크업 언어입니다.
+            웹사이트의 뼈대를 구성하는 역할을 하며, 다양한 태그를 사용하여 콘텐츠의 구조와 의미를
+            정의합니다.
+          </p>
+
+          <h3>HTML의 기본 구조</h3>
+          <p>HTML 문서는 다음과 같은 기본 구조를 가집니다:</p>
+
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;페이지 제목&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;안녕하세요!&lt;/h1&gt;
+    &lt;p&gt;이것은 문단입니다.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          <h3>주요 HTML 태그</h3>
+          <ul>
+            <li><strong>&lt;h1&gt; - &lt;h6&gt;</strong>: 제목 태그</li>
+            <li><strong>&lt;p&gt;</strong>: 문단 태그</li>
+            <li><strong>&lt;a&gt;</strong>: 링크 태그</li>
+            <li><strong>&lt;img&gt;</strong>: 이미지 태그</li>
+            <li><strong>&lt;div&gt;</strong>: 블록 레벨 컨테이너</li>
+            <li><strong>&lt;span&gt;</strong>: 인라인 레벨 컨테이너</li>
+            <li><strong>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</strong>: 목록 태그</li>
+          </ul>
+
+          <h2>CSS란?</h2>
+          <p>
+            CSS(Cascading Style Sheets)는 HTML 요소의 스타일과 레이아웃을 정의하는 스타일 시트
+            언어입니다. HTML이 웹페이지의 구조를 담당한다면, CSS는 그 구조를 아름답게 꾸미는 역할을
+            합니다.
+          </p>
+
+          <blockquote>
+            "HTML은 웹사이트의 뼈대, CSS는 그 뼈대를 감싸는 근육과 피부라고 생각하면 됩니다."
+          </blockquote>
+
+          <h3>CSS 적용 방법</h3>
+          <p>CSS를 HTML 문서에 적용하는 방법은 세 가지가 있습니다:</p>
+
+          <ol>
+            <li><strong>인라인 스타일</strong>: HTML 태그 내에 style 속성을 사용</li>
+            <li>
+              <strong>내부 스타일 시트</strong>: &lt;head&gt; 섹션 내에 &lt;style&gt; 태그 사용
+            </li>
+            <li>
+              <strong>외부 스타일 시트</strong>: 별도의 .css 파일을 생성하고 &lt;link&gt; 태그로
+              연결
+            </li>
+          </ol>
+
+          <h3>기본 CSS 문법</h3>
+          <pre><code>selector {
+    property: value;
+    another-property: another-value;
+}</code></pre>
+
+          <p>
+            이 글을 통해 HTML과 CSS의 기초를 배웠습니다. 이제 직접 실습해보면서 웹 개발 실력을
+            향상시켜 보세요!
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="index.html">홈</a></li>
+          <li><a href="#">블로그</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">연락처</a></li>
+        </ul>
+        <p>&copy; 2023 MyBlog. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

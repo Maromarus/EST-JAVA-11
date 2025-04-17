@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>인사하기</title>
+  </head>
+  <body>
+    <button id="startBtn">Click Me!!</button>
+    <p id="message"></p>
+
+    <script>
+      const startBtn = document.getElementById("startBtn");
+      const message = document.getElementById("message");
+
+      startBtn.addEventListener("click", () => {
+        let dotCount = 0;
+        message.textContent = "로딩중";
+
+        // 0.5초마다 점 하나씩 추가
+        const intervalId = setInterval(() => {
+          dotCount++;
+          message.textContent += ".";
+        }, 500);
+
+        // 3초 후: 로딩 멈추고 입력창 생성
+        setTimeout(() => {
+          clearInterval(intervalId); // 점 찍기 멈춤
+          message.textContent = "이름을 입력해주세요!";
+
+          // 입력창과 버튼 생성
+          const input = document.createElement("input");
+          input.type = "text";
+          input.id = "nameInput";
+          input.placeholder = "이름을 입력하세요";
+
+          const button = document.createElement("button");
+          button.textContent = "확인";
+
+          // 클릭 이벤트
+          button.addEventListener("click", () => {
+            const name = input.value.trim();
+            if (name === "") {
+              message.textContent = "이름을 입력해주세요.";
+            } else {
+              message.textContent = `안녕하세요, ${name}님!`;
+            }
+          });
+
+          document.body.appendChild(input);
+          document.body.appendChild(button);
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

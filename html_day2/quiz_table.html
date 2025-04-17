@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>도서 선호도 표</title>
+    <style>
+      body {
+        text-align: center;
+        padding: 30px;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 300px;
+      }
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 10px;
+      }
+      th {
+        background: #f3f3f3;
+        border-bottom: 3px solid #000;
+      }
+      tr td:first-child,
+      tr th:first-child {
+        background: #f3f3f3;
+        font-weight: bold;
+        border-right: 3px solid #000;
+      }
+      .caption {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>구분</th>
+        <th>2016년</th>
+        <th>2022년</th>
+      </tr>
+
+      <tr>
+        <td>철학</td>
+        <td>50.0%</td>
+        <td>54.9%</td>
+      </tr>
+
+      <tr>
+        <td>소설</td>
+        <td>40.7%</td>
+        <td>53.4%</td>
+      </tr>
+
+      <tr>
+        <td>자기계발</td>
+        <td>51.0%</td>
+        <td>51.6%</td>
+      </tr>
+    </table>
+
+    <div class="caption">나는 이런 종류의 책이 사고 싶다</div>
+  </body>
+</html>

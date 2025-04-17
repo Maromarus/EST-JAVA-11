@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>인사하기</title>
+  </head>
+  <body>
+    <button id="startBtn">Click Me!!</button>
+    <p id="message"></p>
+
+    <script>
+      const startBtn = document.getElementById("startBtn");
+      const message = document.getElementById("message");
+
+      startBtn.addEventListener("click", () => {
+        message.textContent = "로딩중";
+
+        setTimeout(() => {
+          message.textContent = "이름을 입력해주세요!";
+
+          // 입력창과 버튼을 동적으로 생성
+          const input = document.createElement("input");
+          input.type = "text";
+          input.id = "nameInput";
+          input.placeholder = "이름을 입력하세요";
+
+          const button = document.createElement("button");
+          button.textContent = "확인";
+
+          // 버튼 클릭 이벤트 핸들러
+          button.addEventListener("click", () => {
+            const name = input.value.trim();
+            if (name === "") {
+              message.textContent = "이름을 입력해주세요.";
+            } else {
+              message.textContent = `안녕하세요, ${name}님!`;
+            }
+          });
+
+          // 문서에 삽입
+          document.body.appendChild(input);
+          document.body.appendChild(button);
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>시맨틱 레이아웃</title>
+    <style>
+      body {
+        margin: 0;
+        background: #222;
+        font-family: sans-serif;
+        text-align: center;
+        font-weight: bold;
+        color: #eee;
+      }
+      header,
+      footer,
+      nav,
+      aside,
+      section {
+        background: #555;
+        border-radius: 10px;
+      }
+      header,
+      footer {
+        height: 80px;
+        margin: 10px;
+      }
+      footer {
+        height: 60px;
+      }
+      main {
+        display: flex;
+        margin: 10px;
+      }
+      aside {
+        width: 20%;
+      }
+      nav {
+        width: 20%;
+        margin-right: 10px;
+      }
+      aside {
+        margin-left: 10px;
+      }
+      section {
+        flex: 1;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      article {
+        background: #aaa;
+        border-radius: 10px;
+        margin: 10px 0;
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>헤더</header>
+
+    <main>
+      메인
+      <nav>네비게이션</nav>
+
+      <section>
+        섹션
+        <article>기사 1</article>
+        <article>기사2</article>
+        <article>기사3</article>
+      </section>
+
+      <aside>어사이드</aside>
+    </main>
+
+    <footer>푸터</footer>
+  </body>
+</html>
